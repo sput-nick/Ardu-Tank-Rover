@@ -72,7 +72,7 @@ void loop()
   
   // ping sensor sometimes returns 0, if that is the case
   // stop and range again
-  if ( (edgeRange || frontRange) == 0 )
+  if ( (edgeRange == 0) || (frontRange == 0) )
   {
     throttleStop();
     edgeRange = getRange(EDGE);
